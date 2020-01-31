@@ -1,9 +1,6 @@
 # OpenFisca NSW Extension Template
 
-These are the rules for NSW Cost of Living measures, including the active kids
-and creative kids vouchers. It's based on the openfisca extension template. This
-repo contains the rules, tests, and constants. The parameters are defined in
-other repos.
+This is a template for making extensions in NSW.
 
 ## Initialising 
 

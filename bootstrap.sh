@@ -24,14 +24,14 @@ last_bootstrapping_line_number=$(grep --line-number '^## Writing the Legislation
 
 cd ..
 pwd
-mv openfisca_nsw_extension_template openfisca-$lowercase_ext_name
-cd openfisca-$lowercase_ext_name
+mv openfisca_nsw_extension_template openfisca_$lowercase_ext_name
+cd openfisca_$lowercase_ext_name
 
 git init
 git add .
 git commit --no-gpg-sign --message 'Initial import from OpenFisca ext-template' --author='OpenFisca Bot <bot@openfisca.org>'
 
-all_module_files=`find openfisca_ext_template -type f`
+all_module_files=`find openfisca_nsw_extension_template -type f`
 
 set -x
 

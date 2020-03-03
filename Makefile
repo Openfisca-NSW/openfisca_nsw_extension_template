@@ -37,11 +37,6 @@ check-style:
 	flake8 `git ls-files | grep "\.py$$"`
 
 test: build check-syntax-errors check-style
-	python -m pip install openfisca_nsw_base
-	pip install -e .
-	openfisca test openfisca_nsw_extension_template/tests --country-package openfisca_nsw_base --extensions $EXT_NAME
-
-extension: build
 	#python -m pip install ../openfisca_nsw_base/
 	python -m pip install openfisca_nsw_base
 	pip install -e .

@@ -25,7 +25,7 @@ source $SHORT_NAME/bin/activate
 To install your extension, run:
 
 ```sh
-make extension
+make install 
 ```
 
 ## Testing
@@ -33,7 +33,7 @@ make extension
 You can make sure that everything is working by running the provided tests:
 
 ```sh
-make extension
+make test 
 ```
 
 To add your extension to the NSW API, update the openfisca-nsw-API repo's makefile with your

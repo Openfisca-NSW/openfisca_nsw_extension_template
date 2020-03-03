@@ -1,4 +1,4 @@
-all: test
+all: test 
 
 uninstall:
 	pip freeze | grep -v "^-e" | xargs pip uninstall -y
@@ -37,15 +37,13 @@ check-style:
 	flake8 `git ls-files | grep "\.py$$"`
 
 test: build check-syntax-errors check-style
-	openfisca test openfisca_nsw_extention_template/tests --country-package openfisca_nsw --extensions openfisca-nsw-people
-
-venv:
-	python3.7 -m venv kids
-	source kids/bin/activate
+	python -m pip install openfisca_nsw_base
+	pip install -e .
+	openfisca test openfisca_nsw_extension_template/tests --country-package openfisca_nsw_base --extensions $EXT_NAME
 
 extension: build
 	#python -m pip install ../openfisca_nsw_base/
 	python -m pip install openfisca_nsw_base
 	pip install -e .
-	openfisca test openfisca_nsw_extension_template/tests --country-package openfisca_nsw_base --extensions openfisca-nsw-rules-kids-vouchers
+	openfisca test openfisca_nsw_extension_template/tests --country-package openfisca_nsw_base --extensions $EXT_NAME
 

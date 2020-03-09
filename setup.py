@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="$EXT_NAME",
-    version="1.3.2",
-    author="OpenFisca Team",
+    version="0.0.1",
+    author="Department of Customer Service - NSW Government",
     author_email = 'sara.falamaki@customerservice.nsw.gov.au',
     classifiers=[
         "Development Status :: 5 - Production/Stable",
@@ -22,7 +22,6 @@ setup(
         ("share/openfisca/$EXT_NAME", ["CHANGELOG.md", "LICENSE", "README.md"]),
         ],
     install_requires = [
-        'OpenFisca-Core >= 25.3, < 35',
         'OpenFisca_nsw_base'
 
         ],
